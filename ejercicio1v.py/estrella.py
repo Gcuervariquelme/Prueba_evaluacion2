@@ -2,7 +2,7 @@ from vector3d import Vector3D
 import random
 
 class Estrella:
-    nombres_galaxias = ["Andrómeda", "Vía Láctea", "Triángulo", "Magallanes", "Sombrero"]
+    nombres_galaxias = ["Gerardo", "rua Láctea", "Triángulo", "Magalanes", "Sombrero"]
     
     def __init__(self, nombre):
         self.nombre = nombre

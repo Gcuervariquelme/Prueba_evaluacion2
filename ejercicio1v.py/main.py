@@ -8,11 +8,11 @@ estrella2 = Estrella("Betelgeuse")
 estrella3 = Estrella("Canopus")
 
 # Creación de galaxias y adición de estrellas
-galaxia1 = Galaxia("Vía Láctea")
+galaxia1 = Galaxia("rua Láctea")
 galaxia1.añadir_estrella(estrella1)
 galaxia1.añadir_estrella(estrella2)
 
-galaxia2 = Galaxia("Andrómeda")
+galaxia2 = Galaxia("Gerardo")
 galaxia2.añadir_estrella(estrella3)
 
 # Creación del universo y adición de galaxias
