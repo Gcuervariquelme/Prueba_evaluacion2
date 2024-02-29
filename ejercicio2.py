@@ -1,15 +1,27 @@
-texto_original = "un día que el viento soplaba con fuerza#mira como se mueve aquella banderola -dijo un monje#lo que se mueve es el viento -respondió otro monje#ni las banderolas ni el viento, lo que se mueve son vuestras mentes -dijo el maestro"
+class Dialogo:
+    def __init__(self, texto_original):
+        self.texto_original = texto_original
 
-# Paso 1: Dividir el texto en frases
-frases = texto_original.split("#")
+    def dividir_en_frases(self):
+        return self.texto_original.split("#")
 
-# Paso 2 y 3: Capitalizar y añadir puntuación
-frases_formateadas = [frase.capitalize() + "." for frase in frases]
+    def formatear_frases(self, frases):
+        frases_formateadas = [frase.capitalize() + "." for frase in frases]
+        frases_formateadas[0] = frases_formateadas[0].replace(".", "...")
+        return frases_formateadas
 
-# Añadir '...' al final de la primera frase para simular una pausa
-frases_formateadas[0] = frases_formateadas[0].replace(".", "...")
+    def unir_frases(self, frases_formateadas):
+        return "\n\n".join(frases_formateadas)
 
-# Paso 4: Unir las frases con saltos de línea
-dialogo_formateado = "\n\n".join(frases_formateadas)
+def main():
+    texto_original = "un día que el viento soplaba con fuerza#mira como se mueve aquella banderola -dijo un monje#lo que se mueve es el viento -respondió otro monje#ni las banderolas ni el viento, lo que se mueve son vuestras mentes -dijo el maestro"
 
-print(dialogo_formateado)
+    dialogo = Dialogo(texto_original)
+    frases = dialogo.dividir_en_frases()
+    frases_formateadas = dialogo.formatear_frases(frases)
+    dialogo_formateado = dialogo.unir_frases(frases_formateadas)
+
+    print(dialogo_formateado)
+
+if __name__ == "__main__":
+    main()
